@@ -8,7 +8,7 @@
     "build": "npm install",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npm run build && npm start"
+    "serve": "npm run build && npx nodemon"
   },
   "keywords": [],
   "author": "",
