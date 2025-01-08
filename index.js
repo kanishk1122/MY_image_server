@@ -1,12 +1,13 @@
-const express = require("express");
-const multer = require("multer");
-const { MozJPEG, Steps, FromBuffer, FromFile } = require("@imazen/imageflow");
-const fs = require("fs");
+import express from "express"
+import multer from "multer";
+import { MozJPEG, Steps, FromBuffer, FromFile} from "@imazen/imageflow"
+import fs from "fs"
 const app = express();
-require("dotenv").config();
+import dotenv from 'dotenv'
+dotenv.config();
 const API_KEYS = [process.env.API_KEYS]; // Store your valid API keys here
-const cors = require("cors");
-const {uploadImageToCloudinary} = require("./Uploader/imageuploader");
+import cors from  "cors"
+import  {uploadImageToCloudinary} from "./Uploader/imageuploader.js";
 
 app.use(
   cors({
